@@ -1,5 +1,7 @@
 # Piwigo on Railway
 
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/piwigo-template)
+
 One-click deploy of [Piwigo](https://piwigo.org) — the classic open-source photo gallery (20+ years of development) — with the official image, MariaDB, and persistent galleries. Zero deploy-form input.
 
 Deploy it from Railway's template marketplace, or fork this repo and deploy manually.
