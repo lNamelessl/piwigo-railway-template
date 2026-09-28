@@ -15,4 +15,9 @@
 # (cp -arT) whenever the image tag advances.
 FROM piwigo/piwigo:16.4.0
 
+# The upstream init script runs under `set -eu` and reads ${TZ} — with no TZ
+# set the whole oneshot dies ("TZ: parameter not set") and nginx/php-fpm never
+# start (they depend on it). Bake the default so bare `docker run` works.
+ENV TZ=UTC
+
 RUN printf 'OK' > /var/www/source/piwigo/healthz
